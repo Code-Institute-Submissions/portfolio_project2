@@ -9,8 +9,17 @@ body {
     text-align: center;
     margin-bottom: 2px;
 }
+
+/*Control buttons styles*/
+
+.controls {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
 /*question frame styling*/
-.question1 {
+.question {
     color: black;
     background-color: rgba(212, 237, 241, 0.836);
     border-radius: 28px;
@@ -20,6 +29,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    box-shadow: 0 0 10px 2px;
 }
 
 /*Answer container styling*/
@@ -35,6 +45,8 @@ body {
     margin: auto;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    box-shadow: 0 0 10px 2px;
+    border: none;
 }
 
 .answer_container:hover {
@@ -79,4 +91,5 @@ footer {
     font-family: Oswald, sans-serif;
     float: right;
     text-decoration: none;
+    color: black;
 }
