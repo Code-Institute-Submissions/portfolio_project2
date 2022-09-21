@@ -1,12 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@300&display=swap');
 
-* {
-    margin: 0;
-    border: none;
-}
 body {
     background-color: grey;
 }
+
+.header {
+    font-size: large;
+    text-align: center;
+    margin-bottom: 2px;
+}
+
+
+
+.question1 {
+    color: black;
+    background-color: rgba(170, 35, 101, 0.2);
+    border-radius: 18px;
+    width: 60vw;
+    height: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.question2 {
+    color: black;
+    background-color: rgba(170, 35, 101, 0.2);
+    border-radius: 18px;
+    width: 100vw;
+    height: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+
 
 /* social network styling */
 
@@ -15,7 +48,7 @@ footer {
 }
 
 .social-networks {
-    display: inline;
+    text-align: center;
 }
 
 .social-networks>li {
