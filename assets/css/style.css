@@ -25,18 +25,8 @@ body {
     margin: 0 auto;
 }
 
-.question2 {
-    color: black;
-    background-color: rgba(170, 35, 101, 0.2);
-    border-radius: 18px;
-    width: 100vw;
-    height: 20vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 80rem;
-    margin: 0 auto;
-    margin-top: 20px;
+.question1 li {
+    background-color: #3a3a3a;
 }
 
 
