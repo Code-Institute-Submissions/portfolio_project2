@@ -16,6 +16,24 @@ body {
     display: flex;
     justify-content: center;
     justify-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#begin_btn {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem; 
+}
+
+#next_btn {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 /*question frame styling*/
