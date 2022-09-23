@@ -5,56 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/style.css">
-    <title>Document</title>
+    <script src="/assets/js/script.js"></script>
+    <title>Quiz</title>
 </head>
 <body>
-    <div class="header">
-        <h1>Quiz</h1>
+    <div class="container">
+        <div id="question_container" class="hide">
+            <div id="question">Question</div>
+            <div id="answer_buttons" class="btn_grid">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="start_btn" class="start_btn btn">Start</button>
+            <button id="next_btn" class="next_btn btn hide">Next</button>
+        </div>
     </div>
-    <div class="controls">
-        <button id="begin_btn" class="begin_btn btn">Begin the Quiz.</button>
-        <button id="next_btn" class="next_btn btn hide">Ask me more...</button>
-    </div>
-    <div id="question" class="question">
-        <h1><p></p></h1>
-    </div>
-        <button class="answer_container" class="btn"> 
-            <p class="option">A.</p>
-            <p class="option_text"></p> 
-        </button>
-        <button class="answer_container" class="btn">  
-         <p class="option">B.</p>
-            <p class="option_text"></p>
-        </button> 
-        <button class="answer_container" class="btn">
-            <p class="option">C.</p>
-            <p class="option_text"></p>
-        </button> 
-        <button class="answer_container" class="btn">
-            <p class="option">D.</p>
-            <p class="option_text"></p>
-        </button> 
-    <footer id="footer">
-        <ul class="social-networks">
-            <li>
-                <a href="https://twitter.com" target="_blank" rel="noopener"
-                    aria-label="Visit our Twitter page (opens in a new tab)."><i class="fab fa-twitter-square"></i></a>
-            </li>
-            <li>
-                <a href="https://youtube.com" target="_blank" rel="noopener"
-                    aria-label="Visit our Youtube channel (opens in a new tab)."><i
-                        class="fab fa-youtube-square"></i></a>
-            </li>
-            <li>
-                <a href="https://instagram.com" target="_blank" rel="noopener"
-                    aria-label="Visit our Instagram page (opens in a new tab)."><i
-                        class="fab fa-instagram-square"></i></a>
-            </li>
-        </ul>
-        <a class="owner" href="https://www.linkedin.com/in/valentin-myakishev-31b280217/" target="_blank"
-            aria-label="Visitn my linked in page (opens in a new tab)">© Valentin Myakishev</a>
-    </footer>
-    <script src="/assets/js/script.js"></script>
-    <script src="https://kit.fontawesome.com/1d81df9ef3.js"></script>
 </body>
 </html>
