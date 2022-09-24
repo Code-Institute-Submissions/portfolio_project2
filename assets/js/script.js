@@ -12,6 +12,8 @@ nextButton.addEventListener('click', () => {
     setNextQuestion()
 })
 
+//The start game functioin, shuffles questions and removes the start button
+
 function startGame() {
     console.log('started')
     startButton.classList.add('hide')
@@ -21,10 +23,14 @@ function startGame() {
     setNextQuestion()
 }
 
+//Resets the state of game lets a player move to the next question
+
 function setNextQuestion() {
     resetState()
     showQuestion(shuffledQuestions[currentQuestionsIndex])
 }
+
+//Function that displays questions on screen, tracks correct and incorrect answers
 
 function showQuestion(question) {
     questionElement.innerText = question.question
@@ -40,6 +46,8 @@ function showQuestion(question) {
     })
 }
 
+//Next button function, displays the "next" button after a player commits to an answer
+
 function resetState() {
     clearStatusClass(document.body)
     nextButton.classList.add('hide')
@@ -48,6 +56,8 @@ function resetState() {
         (answerButtonsElement.firstChild)
     }
 }
+
+//Select ansewer function, show the go again button and hide it
 
 function selectAnswer(e) {
     const selectedButton = e.target
@@ -64,6 +74,8 @@ function selectAnswer(e) {
     }
 }
 
+//Function that apllies correct and wrong status the player's choice
+
 function setStatusClass(element, correct) {
     clearStatusClass(element)
     if (correct) {
@@ -73,10 +85,14 @@ function setStatusClass(element, correct) {
     }
 }
 
+//Removes the state of correct and wrong
+
 function clearStatusClass(element){
     element.classList.remove('correct')
     element.classList.remove('wrong')
 }
+
+//The list of game questions
 
 const questions = [
     {
@@ -104,15 +120,6 @@ const questions = [
             {text: 'The Battle of France', correct: false},
             {text: 'The Battle of Kursk', correct: true},
             {text: 'The Battle of Bulge', correct: false}
-        ]
-    },
-    {
-        question: "The largest animal known to have ever existed is...",
-        answers: [
-            {text: 'Blue whale', correct: false},
-            {text: 'African elephant', correct: false},
-            {text: 'Polar bear', correct: true},
-            {text: 'Southern elephant seal', correct: false}
         ]
     },
     {
@@ -158,6 +165,15 @@ const questions = [
             {text: 'Egypt and Seleucid Empire', correct: false},
             {text: 'Mycenaean Empire and Egypt', correct: false},
             {text: 'Armenia and Pontus', correct: false}
+        ]
+    },
+    {
+        question: "Which of these writers declined the Nobel Prize in Literature?",
+        answers: [
+            {text: 'Albert Camus', correct: false},
+            {text: 'Jean-Paul Sartre', correct: true},
+            {text: 'Ivan Bunin', correct: false},
+            {text: 'Ernest Hemingway', correct: false}
         ]
     },
 ]

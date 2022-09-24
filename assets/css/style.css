@@ -1,15 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@300&display=swap');
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
 
-:root{
-    --hue-neutral: 200;
-    --hue-wrong: 0;
-    --hue-correct: 145;
+* {
+    font-family: Lato;
+    font-weight: 600;
 }
 
+
+
 body {
-    --hue: var(--hue-neutral);
     padding: 0;
     margin: 0;
     display: flex;
@@ -17,21 +19,21 @@ body {
     height: 100vw;
     justify-content: center;
     align-items: center;
-    background-color: hsl(var(--hue), 100%, 20%);
+    background-color: darkgray;
 }
 
 body.correct {
-    --hue: var(--hue-correct);
+    background-color: aquamarine;
 }
 
 body.wrong {
-    --hue: var(--hue-wrong);
+    background-color: darkgray;
 }
 
 .container {
-    width: 600px;
-    height: 400px;
+    width: 800px;
     max-width: 80%;
+    background-color: bisque;
     border-radius: 8px;
     padding: 10px;
     box-shadow: 0 0 8px 4px;
@@ -46,10 +48,12 @@ body.wrong {
 
 .btn {
     --hue:var(--hue-neutral);
-    border: 1px solid hsl(var(--hue), 100%, 30%);
-    background-color: hsl(var(--hue), 100%, 50%);
+    height: 60px;
+    border: 2px solid darkgray;
+    background-color: cornsilk;
     border-radius: 8px;
     padding: 2x 6px;
+    font-size: 100%;
     color: black;
     outline: none;
 }
@@ -64,11 +68,15 @@ body.wrong {
 }
 
 .btn.wrong {
-    --hue: var(--hue-wrong)
+    background-color: lightcoral;
+}
+
+.btn.correct {
+    background-color: rgb(184, 184, 129);
 }
 
 .start_btn, .next_btn {
-    font-size: large;
+    font-size: 120%;
     font-weight: 600;
     padding: 6px 12px;
 }
@@ -85,5 +93,5 @@ body.wrong {
 
 #question {
     text-align: center;
-    font-size: large;
+    font-size: 120%;
 }
