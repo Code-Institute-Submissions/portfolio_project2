@@ -4,20 +4,15 @@ const nextButton = document.getElementById('next_btn')
 const questionContainerElement = document.getElementById ('question_container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer_buttons')
-const qImg = document.getElementById("qImg"); 
 var progress = document.getElementById('progress')
 var showScore = document.getElementById('score_container')
 
+let scoreCounter = document.querySelector('#score')
+let score = 0
 
 //Defined shuffle questions and question index(the number)
 
 let shuffledQuestions, currentQuestionsIndex; 
-
-let counter = 0 
-setInterval(() => {
-    counter++
-    console.log(counter)
-}, 1000 )
 
 //Start button event listener, does a + 1 so another question shows up 
 
@@ -95,6 +90,7 @@ function setStatusClass(element, correct) {
     clearStatusClass(element)
     if (correct) {
         element.classList.add('correct')
+        incrementScore();
     } else {
         element.classList.add('wrong')
     }
@@ -109,13 +105,19 @@ function clearStatusClass(element){
 
 //Progress bar render function
 
+function incrementScore() {
+    let scoreCounter = document.getElementById('score');
+    scoreCounter.innerHTML = ++score;
+}
+
+
 
 //The list of game questions
+
 
 const questions = [
     {
         question: "The capital of South Africa is...",
-        imgSrc: '/workspace/portfolio_project2/assets/images/giraffe.jpg',
         answers: [
             {text: 'Pretoria', correct: false},
             {text: 'Cape Town', correct: false},
@@ -196,3 +198,5 @@ const questions = [
         ]
     },
 ]
+
+

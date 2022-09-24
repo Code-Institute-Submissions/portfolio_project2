@@ -33,6 +33,12 @@ body {
     box-shadow: 0 0 8px 4px;
 }
 
+#score
+{
+    display: flex;
+    z-index: 100;
+}
+
 .btn_grid {
     display: grid;
     grid-template-columns: repeat(2, auto);
