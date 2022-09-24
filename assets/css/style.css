@@ -65,6 +65,12 @@ body {
     background-color: lightcoral;
 }
 
+#btncounter {
+    height: 30px;
+    width: 20px;
+    position: absolute;
+}
+
 .btn.correct {
     background-color: #8fbc8f;
 }

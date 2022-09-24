@@ -3,13 +3,21 @@ const startButton = document.getElementById('start_btn')
 const nextButton = document.getElementById('next_btn')
 const questionContainerElement = document.getElementById ('question_container')
 const questionElement = document.getElementById('question')
-const answerButtonsElement = document.getElementById('answer_buttons') 
-const progress = document.getElementById('progress')
-const showScore = document.getElementById('score_container')
+const answerButtonsElement = document.getElementById('answer_buttons')
+const qImg = document.getElementById("qImg"); 
+var progress = document.getElementById('progress')
+var showScore = document.getElementById('score_container')
+
 
 //Defined shuffle questions and question index(the number)
 
-let shuffledQuestions, currentQuestionsIndex 
+let shuffledQuestions, currentQuestionsIndex; 
+
+let counter = 0 
+setInterval(() => {
+    counter++
+    console.log(counter)
+}, 1000 )
 
 //Start button event listener, does a + 1 so another question shows up 
 
@@ -81,7 +89,7 @@ function selectAnswer(e) {
     }
 }
 
-//Function that apllies correct and wrong status the player's choice
+//Function that apllies correct and wrong status the player's choice changes background color 
 
 function setStatusClass(element, correct) {
     clearStatusClass(element)
@@ -92,13 +100,14 @@ function setStatusClass(element, correct) {
     }
 }
 
-//Removes the state of correct and wrong
+//Removes the state of correct and wrong, resets the background color
 
 function clearStatusClass(element){
     element.classList.remove('correct')
     element.classList.remove('wrong')
 }
 
+//Progress bar render function
 
 
 //The list of game questions
@@ -106,6 +115,7 @@ function clearStatusClass(element){
 const questions = [
     {
         question: "The capital of South Africa is...",
+        imgSrc: '/workspace/portfolio_project2/assets/images/giraffe.jpg',
         answers: [
             {text: 'Pretoria', correct: false},
             {text: 'Cape Town', correct: false},
