@@ -1,10 +1,17 @@
+//Referances to attributes assigned in HTML
 const startButton = document.getElementById('start_btn')
 const nextButton = document.getElementById('next_btn')
 const questionContainerElement = document.getElementById ('question_container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer_buttons') 
+const progress = document.getElementById('progress')
+const showScore = document.getElementById('score_container')
+
+//Defined shuffle questions and question index(the number)
 
 let shuffledQuestions, currentQuestionsIndex 
+
+//Start button event listener, does a + 1 so another question shows up 
 
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
@@ -91,6 +98,8 @@ function clearStatusClass(element){
     element.classList.remove('correct')
     element.classList.remove('wrong')
 }
+
+
 
 //The list of game questions
 

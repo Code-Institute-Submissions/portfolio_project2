@@ -10,6 +10,105 @@
 }
 
 
+body.correct {
+    background-color: #8fbc8f;
+}
+
+body.wrong {
+    background-color: #cd5c5c;
+}
+
+body {
+    margin-left: 28%;
+    margin-top: 15%;
+    background-color: darkgray;
+}
+
+.container {
+    width: 800px;
+    max-width: 80%;
+    background-color: bisque ;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 0 8px 4px;
+}
+
+.btn_grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn {
+    --hue:var(--hue-neutral);
+    height: 60px;
+    border: 2px solid darkgray;
+    background-color: cornsilk;
+    border-radius: 8px;
+    padding: 2x 6px;
+    font-size: 100%;
+    color: black;
+    outline: none;
+}
+
+.btn:hover{
+    border-color: darkgray;
+}
+
+.btn.correct{
+    --hue: var(--hue-correct);
+    color: black;
+}
+
+.btn.wrong {
+    background-color: lightcoral;
+}
+
+.btn.correct {
+    background-color: #8fbc8f;
+}
+
+.start_btn, .next_btn {
+    font-size: 120%;
+    font-weight: 600;
+    padding: 6px 12px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}
+
+#question {
+    text-align: center;
+    font-size: 120%;
+}
+
+#progress {
+    width: 100%;
+    border-radius: 4px;
+    background-color: gray;
+}
+
+#progress_bar {
+    width: 1%;
+    height: 15px;
+    background-color: green;
+    border-radius: 4px;
+    margin-bottom: 6px;
+}
+
+/* Media queries */
+
+/* For larger to medium screens size from 1200px wide and down */
+
+@media screen and (max-width: 1200px) {
 
 body {
     padding: 0;
@@ -94,4 +193,5 @@ body.wrong {
 #question {
     text-align: center;
     font-size: 120%;
+}
 }
