@@ -29,9 +29,9 @@ body.wrong {
 }
 
 .container {
-    width: 800px;
+    width: 600px;
+    height: 400px;
     max-width: 80%;
-    background-color: white;
     border-radius: 8px;
     padding: 10px;
     box-shadow: 0 0 8px 4px;
@@ -50,7 +50,7 @@ body.wrong {
     background-color: hsl(var(--hue), 100%, 50%);
     border-radius: 8px;
     padding: 2x 6px;
-    color: whitesmoke;
+    color: black;
     outline: none;
 }
 
@@ -81,4 +81,9 @@ body.wrong {
 
 .hide {
     display: none;
+}
+
+#question {
+    text-align: center;
+    font-size: large;
 }
