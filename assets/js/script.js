@@ -74,26 +74,26 @@ function selectAnswer(e) {
     const selectedButton = e.target
     const correct = selectedButton.dataset.correct
     setStatusClass(document.body, correct)
-    Array.from(answerButtonsElement.children).forEach(button => {
-        setStatusClass(button, button.dataset.correct)
-    })
+   if (correct) {
+    incrementScore()
+   }
     if (shuffledQuestions.length > currentQuestionsIndex + 1){
     nextButton.classList.remove('hide')
     } else {
-        
+        startButton.innerText = 'New game'
+        startButton.classList.remove('hide')
+        score = 0
     }
 }
 
 //Function that apllies correct and wrong status the player's choice changes background color 
 
-function setStatusClass(element, correct) {
-    clearStatusClass(element)
-    if (correct) {
-        element.classList.add('correct') 
-        incrementScore(scoreSpan)  
-    } else {
-        element.classList.add('wrong') 
-    }   
+function setStatusClass(correct){
+    if(correct){
+        
+    }else {
+        
+    }
 }
 
 //Removes the state of correct and wrong, resets the background color
@@ -105,8 +105,9 @@ function clearStatusClass(element) {
 
 //Increment and decrement score functions
 
-function incrementScore(scoreSpan) {
-    scoreSpan.innerText = parseInt(scoreSpan.innerText) + 1
+function incrementScore() {
+    let scoreCounter = document.getElementById('score');
+    scoreCounter.innerHTML = ++score;
 }
 
 //The list of game questions
