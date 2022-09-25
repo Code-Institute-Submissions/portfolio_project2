@@ -27,6 +27,7 @@ function startGame() {
     startButton.classList.add('hide')
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionsIndex = 0
+    score = 0
     questionContainerElement.classList.remove('hide')
     setNextQuestion()
 }
@@ -80,19 +81,19 @@ function selectAnswer(e) {
     if (shuffledQuestions.length > currentQuestionsIndex + 1){
     nextButton.classList.remove('hide')
     } else {
+        resetScore()
         startButton.innerText = 'New game'
         startButton.classList.remove('hide')
-        score = 0
     }
 }
 
 //Function that apllies correct and wrong status the player's choice changes background color 
 
-function setStatusClass(correct){
+function setStatusClass(element, correct){
     if(correct){
-        
+        element.classList.add('correct')
     }else {
-        
+        element.classList.add('wrong')
     }
 }
 
@@ -103,11 +104,18 @@ function clearStatusClass(element) {
     element.classList.remove('wrong')
 }
 
-//Increment and decrement score functions
+//Increment score function
 
 function incrementScore() {
-    let scoreCounter = document.getElementById('score');
-    scoreCounter.innerHTML = ++score;
+    let scoreCounter = document.getElementById('score')
+    scoreCounter.innerText = ++score
+}
+
+//Reset score on new game function
+
+function resetScore() {
+    let scoreCounter = document.getElementById('score')
+    scoreCounter.innerText = 0
 }
 
 //The list of game questions
