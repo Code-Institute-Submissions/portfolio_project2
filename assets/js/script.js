@@ -1,4 +1,5 @@
 //Referances to attributes assigned in HTML
+//Game logic and functionality
 const startButton = document.getElementById('start_btn')
 const nextButton = document.getElementById('next_btn')
 const questionContainerElement = document.getElementById ('question_container')
@@ -6,11 +7,11 @@ const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer_buttons')
 const playerScoreSpan = document.querySelector('[data-your-score]')
 
-let score = 0;
+let score = 0
 
 //Defined shuffle questions and question index(the number)
 
-let shuffledQuestions, currentQuestionsIndex; 
+let shuffledQuestions, currentQuestionsIndex
 
 //Start button event listener, does a + 1 so another question shows up 
 
@@ -202,4 +203,41 @@ const questions = [
             {text: 'Ernest Hemingway', correct: false}
         ]
     },
+    {
+        question: 'Who invented JavaScript?',
+        answers: [
+            {text: 'Brendan Eich', correct: true},
+            {text: 'Bjarne Stroustrup', correct: false},
+            {text: 'Sheryl Sandberg', correct: false},
+            {text: 'Douglas Crockford', correct: false}
+        ]
+    },
+    {
+        question: 'It is generally regarded that which event caused the outbreak of the Second Sino-Japanese War?',
+        answers: [
+            {text: 'Tungchow mutiny', correct: false},
+            {text: 'Marco Polo Bridge incedent', correct: true},
+            {text: 'Manchurian incedent', correct: false},
+            {text: 'Jinan incident', correct: false}
+        ]
+    },
+    {
+        question: 'Albigensian Crusade was initiated by...',
+        answers: [
+            {text: 'Pope Innocent III', correct: true},
+            {text: 'Pope Urban II', correct: false},
+            {text: 'Pope Eugene III', correct: false},
+            {text: 'Phillip II of France', correct: false}
+        ]
+    },
+    {
+        question: 'One of the deadliest venoms to humans can be found in...',
+        answers: [
+            {text: 'Irukandji jellyfish', correct: false},
+            {text: 'Indian red scorpion', correct: false},
+            {text: 'Cone snail', correct: false},
+            {text: 'Inland taipan snake', correct: true}
+        ]
+    },
+    
 ]
