@@ -4,11 +4,9 @@ const nextButton = document.getElementById('next_btn')
 const questionContainerElement = document.getElementById ('question_container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer_buttons')
-var progress = document.getElementById('progress')
-var showScore = document.getElementById('score_container')
+const playerScoreSpan = document.querySelector('[data-your-score]')
 
-let scoreCounter = document.querySelector('#score')
-let score = 0
+let score = 0;
 
 //Defined shuffle questions and question index(the number)
 
@@ -50,6 +48,8 @@ function showQuestion(question) {
         button.classList.add('btn')
         if (answer.correct){
             button.dataset.correct = answer.correct
+        } else if (answer.wrong) {
+            button.dataset.wrong = answer.wrong
         }
         button.addEventListener('click', selectAnswer)
         answerButtonsElement.appendChild(button)
@@ -57,6 +57,7 @@ function showQuestion(question) {
 }
 
 //Next button function, displays the "next" button after a player commits to an answer
+//Moves the player to the next question
 
 function resetState() {
     clearStatusClass(document.body)
@@ -67,7 +68,7 @@ function resetState() {
     }
 }
 
-//Select ansewer function, show the go again button and hide it
+//Select ansewer function, shows the go again button and hides it
 
 function selectAnswer(e) {
     const selectedButton = e.target
@@ -79,8 +80,7 @@ function selectAnswer(e) {
     if (shuffledQuestions.length > currentQuestionsIndex + 1){
     nextButton.classList.remove('hide')
     } else {
-        startButton.innerText = 'Go Again'
-        startButton.classList.remove('hide')
+        
     }
 }
 
@@ -89,31 +89,27 @@ function selectAnswer(e) {
 function setStatusClass(element, correct) {
     clearStatusClass(element)
     if (correct) {
-        element.classList.add('correct')
-        incrementScore();
+        element.classList.add('correct') 
+        incrementScore(scoreSpan)  
     } else {
-        element.classList.add('wrong')
-    }
+        element.classList.add('wrong') 
+    }   
 }
 
 //Removes the state of correct and wrong, resets the background color
 
-function clearStatusClass(element){
+function clearStatusClass(element) {
     element.classList.remove('correct')
     element.classList.remove('wrong')
 }
 
-//Progress bar render function
+//Increment and decrement score functions
 
-function incrementScore() {
-    let scoreCounter = document.getElementById('score');
-    scoreCounter.innerHTML = ++score;
+function incrementScore(scoreSpan) {
+    scoreSpan.innerText = parseInt(scoreSpan.innerText) + 1
 }
 
-
-
 //The list of game questions
-
 
 const questions = [
     {
@@ -198,5 +194,3 @@ const questions = [
         ]
     },
 ]
-
-

@@ -9,10 +9,9 @@
     <title>Quiz</title>
 </head>
 <body>
-    
     <div class="container">
         <div>
-            <p class="score-count">Score:<span id="score">0</span></p>
+            <p id="score_count">Score:<span id="score" data-your-score>0</span></p>
         </div>
         <div id="question_container" class="hide">
             <div id="question">Question</div>
@@ -22,16 +21,10 @@
                 <button class="btn">Answer 3</button>
                 <button class="btn">Answer 4</button>
             </div>
-            <div id="progress">
-                <div class="progress_marks"></div>
-            </div>
         </div>
         <div class="controls">
             <button id="start_btn" class="start_btn btn">Start</button>
             <button id="next_btn" class="next_btn btn hide">Another One!</button>
-        </div>
-        <div id="score_container" style="display: none;">
-            <p>1%</p>
         </div>
     </div>
     <script src="/assets/js/script.js"></script>
