@@ -166,7 +166,7 @@ body.wrong {
 
 .btn {
     --hue:var(--hue-neutral);
-    height: 90px;
+    height: auto;
     border: 2px solid darkgray;
     background-color: cornsilk;
     border-radius: 8px;
