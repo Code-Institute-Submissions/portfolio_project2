@@ -9,6 +9,18 @@ const answerButtonsElement = document.getElementById('answer_buttons')
 
 let score = 0
 
+// Helper function
+let domReady = (cb) => {
+    document.readyState === 'interactive' || document.readyState === 'complete'
+      ? cb()
+      : document.addEventListener('DOMContentLoaded', cb);
+  };
+  
+  domReady(() => {
+    // Display body when DOM is loaded
+    document.body.style.visibility = 'visible';
+  });
+
 //Defined shuffle questions and question index(the number)
 
 let shuffledQuestions, currentQuestionsIndex
