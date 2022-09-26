@@ -5,7 +5,7 @@ const nextButton = document.getElementById('next_btn')
 const questionContainerElement = document.getElementById ('question_container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer_buttons')
-const playerScoreSpan = document.querySelector('[data-your-score]')
+
 
 let score = 0
 

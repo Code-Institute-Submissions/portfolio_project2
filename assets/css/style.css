@@ -30,7 +30,7 @@ body {
 /*Styling for the container with buttons and the questions*/
 
 .container {
-    width: 800px;
+    width: 650px;
     max-width: 80%;
     background-color: bisque ;
     border-radius: 8px;
@@ -61,7 +61,7 @@ body {
     border: 2px solid darkgray;
     background-color: cornsilk;
     border-radius: 8px;
-    padding: 2x 6px;
+    padding: 6px;
     font-size: 100%;
     color: black;
     outline: none;
@@ -114,9 +114,9 @@ body {
 
 /* Media queries */
 
-/* For larger to medium screens size from 1200px wide and down */
+/* For larger to medium screens size from 320px wide and down */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 320px) {
 
 body {
     padding: 0;
@@ -138,7 +138,7 @@ body.wrong {
 }
 
 .container {
-    width: 800px;
+    width: 600px;
     max-width: 80%;
     background-color: bisque;
     border-radius: 8px;
@@ -159,10 +159,11 @@ body.wrong {
     border: 2px solid darkgray;
     background-color: cornsilk;
     border-radius: 8px;
-    padding: 2x 6px;
-    font-size: 100%;
+    padding: 6px;
+    font-size: 80%;
     color: black;
     outline: none;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .btn:hover{
