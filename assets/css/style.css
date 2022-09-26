@@ -27,6 +27,13 @@ body {
     background-color: darkgray;
 }
 
+#title {
+    margin-top: 0;
+    margin-bottom: 16px;
+    display: flex;
+    font-size: large;
+}
+
 /*Styling for the container with buttons and the questions*/
 
 .container {
@@ -119,14 +126,17 @@ body {
 @media screen and (max-width: 320px) {
 
 body {
-    margin-top: 10px;
+    margin-top: 60px;
     padding: 0;
-    display: flex;
-    width: 100vw;
-    height: 100vw;
+    width: 80vw;
+    height: 80vh;
     justify-content: center;
     align-items: center;
     background-color: darkgray;
+}
+
+#title {
+    display: none;
 }
 
 body.correct {
