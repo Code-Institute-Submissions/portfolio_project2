@@ -9,6 +9,7 @@
     font-weight: 600;
 }
 
+/* Background colors for correct and wrong answers */
 
 body.correct {
     background-color: #8fbc8f;
@@ -18,11 +19,15 @@ body.wrong {
     background-color: #cd5c5c;
 }
 
+/*HMTL body styling*/
+
 body {
     margin-left: 28%;
     margin-top: 15%;
     background-color: darkgray;
 }
+
+/*Styling for the container with buttons and the questions*/
 
 .container {
     width: 800px;
@@ -33,11 +38,15 @@ body {
     box-shadow: 0 0 8px 4px;
 }
 
+/*score div styling*/
+
 #score
 {
     display: inline;
     z-index: 100;
 }
+
+/*Styling of the buttons inside the container*/
 
 .btn_grid {
     display: grid;
@@ -56,19 +65,6 @@ body {
     font-size: 100%;
     color: black;
     outline: none;
-}
-
-.btn:hover{
-    border-color: darkgray;
-}
-
-.btn.correct{
-    --hue: var(--hue-correct);
-    color: black;
-}
-
-.btn.wrong {
-    background-color: lightcoral;
 }
 
 #btncounter {
