@@ -149,6 +149,7 @@ body.wrong {
 
 .container {
     width: 800px;
+    height: auto;
     max-width: 80%;
     background-color: bisque;
     border-radius: 8px;
