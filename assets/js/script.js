@@ -17,7 +17,7 @@ let domReady = (cb) => {
   };
   
   domReady(() => {
-    // Display body when DOM is loaded
+// Display body when DOM is loaded
     document.body.style.visibility = 'visible';
   });
 
