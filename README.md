@@ -1,4 +1,4 @@
-<h1>Quiz - Portfolio project 2</h1>
+<h1>A Simple Quiz Game</h1>
 
 This is a minimalist style quiz created using HTML, CSS and Javascript. It's aim is to test player's general knowledge. There are questions on a variety 
 
