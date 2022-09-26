@@ -114,13 +114,13 @@ body {
 
 /* Media queries */
 
-/* For larger to medium screens size from 320px wide and down */
+/* For larger to small screens size from 320px wide and down */
 
 @media screen and (max-width: 320px) {
 
 body {
+    margin-top: 10px;
     padding: 0;
-    margin: 0;
     display: flex;
     width: 100vw;
     height: 100vw;
@@ -138,7 +138,7 @@ body.wrong {
 }
 
 .container {
-    width: 600px;
+    width: 800px;
     max-width: 80%;
     background-color: bisque;
     border-radius: 8px;
@@ -155,7 +155,7 @@ body.wrong {
 
 .btn {
     --hue:var(--hue-neutral);
-    height: 60px;
+    height: 90px;
     border: 2px solid darkgray;
     background-color: cornsilk;
     border-radius: 8px;
